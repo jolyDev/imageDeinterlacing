@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  deinterlacer:
+    build: ./deinterlacer
+    volumes:
+    - ./data:/app/data
+    entrypoint: ["./app/build/deinterlacer", "/app/data/interlaced.jpg", "/app/data/progressive.jpg"]
